@@ -9,12 +9,10 @@ public abstract class Person
         this.familyName = familyName;
     }
     public abstract String toString();
-    public String getFirstName()
-    {
+    public String getFirstName() {
         return firstName;
     }
-    public String getFamilyName()
-    {
+    public String getFamilyName() {
         return familyName;
     }
     public boolean equals(Person p)
