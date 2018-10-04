@@ -11,24 +11,15 @@ public abstract class Person
     {
         return firstName;
     }
-    public void setFirstName(String firstName)
-    {
-        this.firstName = firstName;
-    }
     public String getFamilyName()
     {
         return familyName;
     }
-    public void setFamilyName(String familyName)
+    public boolean equals(Person p)
     {
-        this.familyName = familyName;
-    }
-    public boolean equals(Person person)
-    {
-        if(this.firstName.equals(person.getFirstName()) && this.familyName.equals(person.getFamilyName()))
+        if(this.firstName.equals(p.getFirstName()) && this.familyName.equals(p.getFamilyName()))
         {
             return true;
-        }
-        else return false;
+        }else return false;
     }
 }
