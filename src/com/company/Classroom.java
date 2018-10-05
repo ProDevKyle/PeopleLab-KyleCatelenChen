@@ -1,4 +1,4 @@
-/*package com.company;
+package com.company;
 
 public class Classroom {
     public Classroom(Student[] students, Teacher teacher){
