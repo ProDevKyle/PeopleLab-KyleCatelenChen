@@ -8,18 +8,21 @@ public abstract class Person
         this.firstName = firstName;
         this.familyName = familyName;
     }
-    public abstract String toString();
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
+
     public String getFamilyName() {
-        return familyName;
+        return this.familyName;
     }
     public boolean equals(Person p)
     {
         if(this.firstName.equals(p.getFirstName()) && this.familyName.equals(p.getFamilyName()))
         {
             return true;
-        }else return false;
+        }else {
+            return false;
+        }
     }
+
 }
