@@ -1,8 +1,18 @@
 package com.company;
 
 public class Runner {
-    Person p1 = new Student("3.5", "12", "3", "Jacky", "Jack");
-    Person p2 = new Teacher("English", "Mr.","John", "Adams");
-    System.out.println(p2.getSubject());
+    public static String[] firstNames = {"A", "B", "C", "D"};
+    public static String[] familyNames = {"Q", "W", "E", "R"};
 
+    public static void main(String[] args) {
+        Student[] students = new Student[34];
+        for (int i = 0; i < 34; i++) {
+            students[i] = randomStudent();
+        }
+
+        Teacher teach = new Teacher("Math", "Ms.", "A", "B");
+        Classroom classRoom = new Classroom(students,teach);
+
+        classRoom.printClass();
+    }
 }
