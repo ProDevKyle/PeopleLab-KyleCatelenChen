@@ -16,6 +16,6 @@ public class Runner {
         classRoom.printClass();
     }
     public static Student randomStudent(){
-        return new Student((double)(Math.random()*(4.0)+1), )
+        return new Student((double)(Math.random()*(4.0)+1), 9+(int)(Math.random()*(3)+1), (int)(Math.random()*10)+1, "X", "Y");
     }
 }
