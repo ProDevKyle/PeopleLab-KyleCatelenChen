@@ -24,6 +24,6 @@ public class Student extends Person {
     public String toString() {
         String famName = this.getFamilyName();
         String firName = this.getFirstName();
-        return (famName + "," + firName);
+        return (firName + " " + famName);
     }
 }

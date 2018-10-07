@@ -12,9 +12,12 @@ public class Teacher extends Person{
         this.title = title;
         this.familyName = familyName;
         this.firstName = firstName;
+        String toString = toString();
     }
-    @Override
-    public String toString() {
-        return title + "." + familyName;
+    public String toString(){
+        return this.title + "." + this.familyName;
+    }
+    public String getSubject(){
+        return this.subject;
     }
 }

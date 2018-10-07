@@ -1,7 +1,7 @@
 package com.company;
 
 public class Runner {
-    public static String[] firstNames = {"A", "B", "C", "D"};
+    public static String[] firstNames = {"Ashley", "Ben", "Chris", "David", "Evelyn", "Franny", "Gabe", "Hayley", "Ina", "Janet", "Kevin", "Larry"};
     public static String[] familyNames = {"Q", "W", "E", "R"};
 
     public static void main(String[] args) {
@@ -10,12 +10,12 @@ public class Runner {
             students[i] = randomStudent();
         }
 
-        Teacher teach = new Teacher("Math", "Ms.", "A", "B");
-        Classroom classRoom = new Classroom(students,teach);
-
-        classRoom.printClass();
+        Teacher teach = new Teacher("Math", "Ms", "A", "B");
+        Classroom classRoom = new Classroom(students, teach);
+        System.out.println(classRoom.printClass());
     }
     public static Student randomStudent(){
-        return new Student((double)(Math.random()*(4.0)+1), 9+(int)(Math.random()*(3)+1), (int)(Math.random()*10)+1, "X", "Y");
+        return new Student((double)(Math.random()*(3.0)+1), 9+(int)(Math.random()*(3)+1), (int)(Math.random()*10)+1, firstNames[(int)(Math.random() * firstNames.length)], familyNames[(int)(Math.random() * familyNames.length)]);
     }
+
 }

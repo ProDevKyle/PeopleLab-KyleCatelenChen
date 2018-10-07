@@ -1,29 +1,29 @@
 package com.company;
 
 public class Classroom {
+    private Student[] studentList;
+    private Teacher teacher;
     public Classroom(Student[] students, Teacher teacher){
-        super("classroom");
+        this.studentList = students;
+        this.teacher = teacher;
     }
-
-    @Override
     public String getSubject(){
         return teacher.getSubject();
     }
-    @Override
     public double classAverage(){
-        int totalAvg;
-        for(Student s : students){
+        double totalAvg = 0;
+        for(Student s : studentList){
             totalAvg += s.getGPA();
         }
-        return totalAvg / students.length();
+        return totalAvg / 34;
     }
-    @Override
+
     public String printClass(){
         String output = "";
-        output += teacher.toString() + teacher.getSubject();
-        for(Student s : students){
-
+        output += "Teacher: " + teacher.toString() + ", Subject: " + teacher.getSubject() + ",1 Students:";
+        for(Student s : studentList){
+            output += " " + s.toString() + ",";
         }
-
+        return output;
     }
 }
