@@ -13,6 +13,7 @@ public class Runner {
         Teacher teach = new Teacher("Math", "Ms", "A", "B");
         Classroom classRoom = new Classroom(students, teach);
         System.out.println(classRoom.printClass());
+        System.out.println(classRoom.classAverage());
     }
     public static Student randomStudent(){
         return new Student((double)(Math.random()*(3.0)+1), 9+(int)(Math.random()*(3)+1), (int)(Math.random()*10)+1, firstNames[(int)(Math.random() * firstNames.length)], familyNames[(int)(Math.random() * familyNames.length)]);
