@@ -20,7 +20,7 @@ public class Classroom {
 
     public String printClass(){
         String output = "";
-        output += "Teacher: " + teacher.toString() + ", Subject: " + teacher.getSubject() + ",1 Students:";
+        output += "Teacher: " + teacher.toString() + ", Subject: " + teacher.getSubject() + ", Students:";
         for(Student s : studentList){
             output += " " + s.toString() + ",";
         }
